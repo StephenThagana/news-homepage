@@ -206,16 +206,21 @@ body {
 
 @media (max-width: 56.25em) {
   .popular {
-    grid-template-columns: 1fr;
-    background-color: red; } }
+    grid-template-columns: 1fr; } }
 
 .popular__item {
   display: flex;
   gap: 1.2rem; }
+  @media (max-width: 56.25em) {
+    .popular__item {
+      align-items: flex-start; } }
 
 .popular__img {
   width: 100%;
   height: 100%; }
+  @media (max-width: 56.25em) {
+    .popular__img {
+      width: 100%; } }
 
 .popular__content {
   display: flex;
@@ -223,7 +228,8 @@ body {
   gap: 1.2rem; }
   @media (max-width: 56.25em) {
     .popular__content {
-      padding: 1.2rem; } }
+      padding: 1.2rem;
+      align-self: stretch; } }
 
 .popular__number {
   font-size: 2.4rem;
