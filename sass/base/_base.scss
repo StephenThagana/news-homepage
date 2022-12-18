@@ -1,0 +1,47 @@
+////////////////////////////
+// BASIC RESET
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // by default 1rem =16px, so set 1rem = 10px(10/16 *100)
+  font-size: 62.5%;
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+body {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 144rem;
+  padding: 0 8rem;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  gap: 3.2rem;
+}
+
+.grid-2--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3--cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4--cols {
+  grid-template-columns: repeat(4, 1fr);
+}

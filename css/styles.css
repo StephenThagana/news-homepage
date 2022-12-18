@@ -1,0 +1,236 @@
+/*
+
+0 -600px: phone
+600px - 900px: tab portrait
+900px - 1200px: tab landscape  
+1200px - 1800px: is where our normal styles apply
+1800px + : big desktops
+
+
+$breakpoint arguments
+-phone
+-tab-port
+-tab-land
+-big-desktops
+
+*/
+:root {
+  --color-primary: #e9ab53;
+  --color-secondary: #f15e50;
+  --color-off-white: #fffdfa;
+  --color-grayish-blue: #c5c6ce;
+  --color-dark-grayish-blue: #5d5f79;
+  --color-Very-dark-blue: #00001a;
+  --font-size-paragraph: 1.5rem;
+  --font-family: "Inter", sans-serif; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  box-sizing: border-box; }
+
+.container {
+  max-width: 144rem;
+  padding: 0 8rem;
+  margin: 0 auto; }
+
+.grid {
+  display: grid;
+  gap: 3.2rem; }
+
+.grid-2--cols {
+  grid-template-columns: repeat(2, 1fr); }
+
+.grid-3--cols {
+  grid-template-columns: repeat(3, 1fr); }
+
+.grid-4--cols {
+  grid-template-columns: repeat(4, 1fr); }
+
+body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--font-size-paragraph); }
+
+.heading-primary {
+  font-size: 4.8rem;
+  color: var(--color-Very-dark-blue); }
+
+.heading-secondary {
+  font-size: 3.2rem;
+  color: var(--color-primary); }
+
+.heading-tertiary-sub {
+  font-size: 1.5rem;
+  color: var(--color-Very-dark-blue); }
+
+.u-mb-xs {
+  margin-bottom: 1.2rem; }
+
+.u-mb-sm {
+  margin-bottom: 2rem; }
+
+.u-mb-md {
+  margin-bottom: 4rem; }
+
+.u-mb-lg {
+  margin-bottom: 6rem; }
+
+.u-mb-hg {
+  margin-bottom: 8rem; }
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 1.2rem 3.2rem;
+  text-decoration: none;
+  font-size: var(--font-size-paragraph);
+  transition: all 0.3s; }
+
+.btn--primary:link,
+.btn--primary:visited {
+  background-color: var(--color-secondary);
+  color: #fff;
+  text-transform: uppercase; }
+
+.btn--primary:hover,
+.btn--primary:active {
+  background-color: var(--color-Very-dark-blue);
+  color: #fff; }
+
+.container__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.2rem; }
+
+.header__link {
+  margin-right: auto; }
+
+.main__nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem; }
+
+.main__nav-link:link,
+.main__nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-dark-grayish-blue);
+  font-size: 1.5rem;
+  transition: all 0.3s; }
+
+.main__nav-link:hover,
+.main__nav-link:active {
+  color: var(--color-primary); }
+
+.section__home {
+  padding: 5rem 0; }
+
+.container__home {
+  grid-column: 1 / span 2; }
+
+.container__img {
+  width: 100%;
+  display: block;
+  grid-column: 1 / -1; }
+
+.container__description {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  align-items: flex-start; }
+
+.container__text {
+  font-size: var(--font-size-paragraph);
+  color: var(--color-dark-grayish-blue);
+  line-height: 1.8; }
+
+.container__new {
+  background-color: var(--color-Very-dark-blue);
+  padding: 3.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem; }
+
+.new {
+  color: #fff;
+  border-bottom: 1px solid var(--color-dark-grayish-blue);
+  padding-bottom: 3.2rem; }
+  .new__text {
+    color: var(--color-grayish-blue); }
+
+.news__link:link,
+.news__link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s; }
+
+.news__link--home:link,
+.news__link:visited {
+  color: #fff;
+  font-size: 1.5rem; }
+
+.news__link--home:hover,
+.news__link--home:active {
+  color: var(--color-primary); }
+
+.news__link--popular:link,
+.news__link--popular:visited {
+  color: var(--color-Very-dark-blue);
+  font-size: 1.5rem; }
+
+.news__link--popular:hover,
+.news__link--popular:active {
+  color: var(--color-secondary);
+  font-size: 1.5rem; }
+
+.section__trends {
+  padding-bottom: 9.6rem; }
+
+@media (max-width: 56.25em) {
+  .popular {
+    grid-template-columns: 1fr;
+    background-color: red; } }
+
+.popular__item {
+  display: flex;
+  gap: 1.2rem; }
+
+.popular__img {
+  width: 100%;
+  height: 100%; }
+
+.popular__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; }
+  @media (max-width: 56.25em) {
+    .popular__content {
+      padding: 1.2rem; } }
+
+.popular__number {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-grayish-blue); }
+
+.popular__text {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--color-dark-grayish-blue); }

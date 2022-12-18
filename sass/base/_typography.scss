@@ -1,0 +1,18 @@
+body {
+  font-family: var(--font-family);
+  // line-height: 1.8;
+  font-weight: 400;
+  font-size: var(--font-size-paragraph);
+}
+.heading-primary {
+  font-size: 4.8rem;
+  color: var(--color-Very-dark-blue);
+}
+.heading-secondary {
+  font-size: 3.2rem;
+  color: var(--color-primary);
+}
+.heading-tertiary-sub {
+  font-size: 1.5rem;
+  color: var(--color-Very-dark-blue);
+}

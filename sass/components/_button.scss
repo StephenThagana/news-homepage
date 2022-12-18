@@ -1,0 +1,20 @@
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 1.2rem 3.2rem;
+  text-decoration: none;
+  font-size: var(--font-size-paragraph);
+  transition: all 0.3s;
+}
+.btn--primary:link,
+.btn--primary:visited {
+  background-color: var(--color-secondary);
+  color: #fff;
+  text-transform: uppercase;
+}
+.btn--primary:hover,
+.btn--primary:active {
+  background-color: var(--color-Very-dark-blue);
+  color: #fff;
+}

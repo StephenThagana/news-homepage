@@ -1,0 +1,16 @@
+// abstracts files
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+// base files
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+// components files
+@import "components/button";
+@import "components/header";
+
+// layout files
+@import "layout/section__home";
+@import "layout/section__trends";
