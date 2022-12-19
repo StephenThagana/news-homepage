@@ -23,7 +23,7 @@ $breakpoint arguments
   --color-Very-dark-blue: #00001a;
   --font-size-paragraph: 1.5rem;
   --font-family: "Inter", sans-serif;
-  --section-padding: 1.2rem 0; }
+  --section-padding: 1.2rem 0 10rem 0; }
 
 *,
 *::before,
@@ -123,6 +123,30 @@ body {
   background-color: var(--color-Very-dark-blue);
   color: #fff; }
 
+.btn__mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none; }
+  @media (max-width: 46.875em) {
+    .btn__mobile-nav {
+      display: block; } }
+
+.icon-mobile-nav {
+  width: 4.8rem;
+  height: 4.8rem;
+  color: #333; }
+
+.nav-open .icon-mobile-nav[name="close-outline"] {
+  display: none; }
+  @media (max-width: 46.875em) {
+    .nav-open .icon-mobile-nav[name="close-outline"] {
+      display: block; } }
+
+@media (max-width: 46.875em) {
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none; } }
+
 .container__header {
   display: flex;
   align-items: center;
@@ -131,11 +155,36 @@ body {
 .header__link {
   margin-right: auto; }
 
+@media (max-width: 46.875em) {
+  .main__nav {
+    background-color: orangered;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden; } }
+
 .main__nav-list {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 3.2rem; }
+  @media (max-width: 46.875em) {
+    .main__nav-list {
+      flex-direction: column; } }
+
+@media (max-width: 46.875em) {
+  .nav-open .main__nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible; } }
 
 .main__nav-link:link,
 .main__nav-link:visited {
@@ -144,6 +193,10 @@ body {
   color: var(--color-dark-grayish-blue);
   font-size: 1.5rem;
   transition: all 0.3s; }
+  @media (max-width: 46.875em) {
+    .main__nav-link:link,
+    .main__nav-link:visited {
+      font-size: 1.8rem; } }
 
 .main__nav-link:hover,
 .main__nav-link:active {
