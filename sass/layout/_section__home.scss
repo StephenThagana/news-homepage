@@ -2,7 +2,7 @@
   padding: 12rem 0;
 
   @include respond(mid-tab-port) {
-    padding: 1.8rem;
+    padding: var(--section-padding);
   }
 }
 .container {
