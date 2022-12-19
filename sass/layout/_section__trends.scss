@@ -2,24 +2,51 @@
   padding-bottom: 9.6rem;
 }
 .popular {
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
   &__item {
     display: flex;
     align-items: stretch;
     gap: 1.2rem;
-    &__content {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
+
+    @include respond(phone) {
+      align-items: flex-start;
+      gap: 3.2rem;
     }
-    &__number {
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: var(--color-grayish-blue);
+  }
+
+  &__photo {
+    flex: 0 0 30%;
+
+    @include respond(phone) {
+      flex: 0 0 15%;
     }
-    &__text {
-      font-size: 1.3rem;
-      line-height: 1.5;
-      color: var(--color-dark-grayish-blue);
+    @include respond(sm-phone) {
+      flex: 0 0 22%;
     }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    @include respond(phone) {
+      flex: 1;
+    }
+  }
+  &__number {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-grayish-blue);
+  }
+  &__text {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: var(--color-dark-grayish-blue);
   }
 }
