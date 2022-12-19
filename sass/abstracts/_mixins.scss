@@ -3,8 +3,8 @@
 /*
 
 0 -600px: phone
-600px - 900px: tab portrait
-900px - 1200px: tab landscape  
+600px - 1000px: tab portrait
+1000px - 1200px: tab landscape  
 1200px - 1800px: is where our normal styles apply
 1800px + : big desktops
 
@@ -24,27 +24,33 @@ $breakpoint arguments
     }
   }
   @if $breakpoint==(tab-port) {
-    @media (max-width: 56.25em) {
-      //900px
+    @media (max-width: 62.5em) {
+      //1000px
       @content;
     }
   }
   @if $breakpoint==(mid-tab-port) {
-    @media (max-width: 40.625em) {
-      //650px
+    @media (max-width: 46.875em) {
+      //750px
       @content;
     }
   }
   @if $breakpoint==(phone) {
-    @media (max-width: 75em) {
+    @media (max-width: 37.5em) {
       //600px
       @content;
     }
-  }
-  @if $breakpoint==(big-desktops) {
-    @media (min-width: 112.5em) {
-      //1800px +
-      @content;
+    @if $breakpoint==(sm-phone) {
+      @media (max-width: 29.0625em) {
+        //465px
+        @content;
+      }
+    }
+    @if $breakpoint==(big-desktops) {
+      @media (min-width: 112.5em) {
+        //1800px +
+        @content;
+      }
     }
   }
 }
