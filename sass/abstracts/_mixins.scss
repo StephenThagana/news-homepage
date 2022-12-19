@@ -24,8 +24,8 @@ $breakpoint arguments
     }
   }
   @if $breakpoint==(tab-port) {
-    @media (max-width: 62.5em) {
-      //1000px
+    @media (max-width: 64.375em) {
+      //1030px
       @content;
     }
   }
@@ -40,17 +40,17 @@ $breakpoint arguments
       //600px
       @content;
     }
-    @if $breakpoint==(sm-phone) {
-      @media (max-width: 29.0625em) {
-        //465px
-        @content;
-      }
+  }
+  @if $breakpoint==(sm-phone) {
+    @media (max-width: 23.75em) {
+      //380px
+      @content;
     }
-    @if $breakpoint==(big-desktops) {
-      @media (min-width: 112.5em) {
-        //1800px +
-        @content;
-      }
+  }
+  @if $breakpoint==(big-desktops) {
+    @media (min-width: 112.5em) {
+      //1800px +
+      @content;
     }
   }
 }

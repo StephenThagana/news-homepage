@@ -1,5 +1,9 @@
 .section__home {
-  padding: 5rem 0;
+  padding: 12rem 0;
+
+  @include respond(mid-tab-port) {
+    padding: 1.8rem;
+  }
 }
 .container {
   &__content {
@@ -11,7 +15,7 @@
     // background-color: red;
     grid-column: 1 / span 2;
 
-    @include respond(sm-phone) {
+    @include respond(phone) {
       grid-template-columns: 1fr;
     }
   }

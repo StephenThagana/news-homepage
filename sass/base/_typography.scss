@@ -7,6 +7,10 @@ body {
 .heading-primary {
   font-size: 4.8rem;
   color: var(--color-Very-dark-blue);
+
+  @include respond(phone) {
+    font-size: 3.6rem;
+  }
 }
 .heading-secondary {
   font-size: 3.2rem;
