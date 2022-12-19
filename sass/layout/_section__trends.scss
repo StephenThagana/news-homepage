@@ -1,5 +1,9 @@
 .section__trends {
   padding-bottom: 9.6rem;
+
+  @include respond(mid-tab-port) {
+    padding: var(--section-padding);
+  }
 }
 .popular {
   @include respond(phone) {
@@ -7,11 +11,9 @@
   }
   &__item {
     display: flex;
-    align-items: stretch;
     gap: 1.2rem;
 
     @include respond(phone) {
-      align-items: flex-start;
       gap: 3.2rem;
     }
   }
