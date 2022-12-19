@@ -1,8 +1,8 @@
 /*
 
 0 -600px: phone
-600px - 900px: tab portrait
-900px - 1200px: tab landscape  
+600px - 1000px: tab portrait
+1000px - 1200px: tab landscape  
 1200px - 1800px: is where our normal styles apply
 1800px + : big desktops
 
@@ -36,7 +36,7 @@ html {
   @media (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
+  @media (max-width: 62.5em) {
     html {
       font-size: 50%; } }
 
@@ -47,6 +47,12 @@ body {
   max-width: 144rem;
   padding: 0 8rem;
   margin: 0 auto; }
+  @media (max-width: 62.5em) {
+    .container {
+      padding: 0 3.2rem; } }
+  @media (max-width: 46.875em) {
+    .container {
+      padding: 0 1.2rem; } }
 
 .grid {
   display: grid;
@@ -142,6 +148,10 @@ body {
 .section__home {
   padding: 5rem 0; }
 
+@media (max-width: 46.875em) {
+  .container__content {
+    grid-template-columns: 1fr; } }
+
 .container__home {
   grid-column: 1 / span 2; }
 
@@ -167,6 +177,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3.2rem; }
+  @media (max-width: 46.875em) {
+    .container__new {
+      margin-right: -3.2rem; } }
 
 .new {
   color: #fff;
@@ -204,32 +217,33 @@ body {
 .section__trends {
   padding-bottom: 9.6rem; }
 
-@media (max-width: 56.25em) {
+@media (max-width: 37.5em) {
   .popular {
     grid-template-columns: 1fr; } }
 
 .popular__item {
   display: flex;
+  align-items: stretch;
   gap: 1.2rem; }
-  @media (max-width: 56.25em) {
+  @media (max-width: 37.5em) {
     .popular__item {
-      align-items: flex-start; } }
+      align-items: flex-start;
+      gap: 3.2rem; } }
+
+.popular__photo {
+  flex: 0 0 30%; }
+  @media (max-width: 37.5em) {
+    .popular__photo {
+      flex: 0 0 15%; } }
 
 .popular__img {
   width: 100%;
   height: 100%; }
-  @media (max-width: 56.25em) {
-    .popular__img {
-      width: 100%; } }
 
 .popular__content {
   display: flex;
   flex-direction: column;
   gap: 1.2rem; }
-  @media (max-width: 56.25em) {
-    .popular__content {
-      padding: 1.2rem;
-      align-self: stretch; } }
 
 .popular__number {
   font-size: 2.4rem;

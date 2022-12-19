@@ -30,6 +30,12 @@ body {
   max-width: 144rem;
   padding: 0 8rem;
   margin: 0 auto;
+  @include respond(tab-port) {
+    padding: 0 3.2rem;
+  }
+  @include respond(mid-tab-port) {
+    padding: 0 1.2rem;
+  }
 }
 .grid {
   display: grid;

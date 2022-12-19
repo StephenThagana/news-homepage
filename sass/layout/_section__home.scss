@@ -2,11 +2,18 @@
   padding: 5rem 0;
 }
 .container {
-  // &__content {
-  // }
+  &__content {
+    @include respond(mid-tab-port) {
+      grid-template-columns: 1fr;
+    }
+  }
   &__home {
     // background-color: red;
     grid-column: 1 / span 2;
+
+    @include respond(sm-phone) {
+      grid-template-columns: 1fr;
+    }
   }
   &__img {
     width: 100%;
@@ -32,6 +39,9 @@
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
+    @include respond(mid-tab-port) {
+      margin-right: -3.2rem;
+    }
   }
 }
 
