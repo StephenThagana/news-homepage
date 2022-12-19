@@ -8,17 +8,18 @@
 }
 .main__nav {
   @include respond(mid-tab-port) {
-    background-color: orangered;
+    background-color: var(--color-off-white);
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 50%;
     height: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s;
+    transition: all 0.5s ease-in;
+    transform: translateX(100%);
 
     // HIDE NAVIGATION
     opacity: 0;
@@ -43,6 +44,7 @@
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
+    transform: translateX(0);
   }
 }
 .main__nav-link:link,
