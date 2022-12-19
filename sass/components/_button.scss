@@ -18,3 +18,32 @@
   background-color: var(--color-Very-dark-blue);
   color: #fff;
 }
+//////////////////////////
+/// MOBILE NAVIGATION
+.btn__mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+
+  @include respond(mid-tab-port) {
+    display: block;
+  }
+}
+.icon-mobile-nav {
+  width: 4.8rem;
+  height: 4.8rem;
+  color: #333;
+}
+.nav-open .icon-mobile-nav[name="close-outline"] {
+  display: none;
+
+  @include respond(mid-tab-port) {
+    display: block;
+  }
+}
+.nav-open .icon-mobile-nav[name="menu-outline"] {
+  @include respond(mid-tab-port) {
+    display: none;
+  }
+}
